@@ -1,0 +1,537 @@
+
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+
+ :root{
+     /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(79, 72%, 55%);
+  --first-color-light: hsl(79, 97%, 77%);
+  --first-color-alt: hsl(79, 67%, 52%);
+  --first-color-dark: hsl(79, 63%, 50%);
+  --first-color-gray: hsl(79, 6%, 64%);
+  --title-color: hsl(180, 4%, 98%);
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: hsl(180, 4%, 72%);
+  --text-color-light: hsl(180, 4%, 65%);
+  --body-color: hsl(180, 12%, 8%);
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    scroll-behavior: auto;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif; /*for font-family*/
+    background-color: var(--body-color);
+    overflow-x: hidden;
+}
+.section{
+    padding: 50px 0;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{text-decoration: none;}
+
+/* ================ header =================== */
+.top-header{
+    background-color: var(--title-color-black);
+   z-index: 20;
+   
+}
+
+.top-bar{
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    
+}
+
+.sticky .top-header{
+    position: fixed;
+    z-index: 20;
+    right: 0;
+    left: 0;  
+   animation: sti 1s;
+   animation-direction: inherited;
+}
+@keyframes sti {
+    0% {
+     top: -50px;   
+       
+    }
+    100% {
+     top: 0; 
+    }
+}
+
+.top-bar .logo img{
+    width: 40px;
+    transition: all 1s ease;
+}
+.sticky .top-bar .logo img{
+    width: 50px;
+}
+.top-bar .drawer ul{
+    display: flex;
+    align-items: center;
+    
+}
+.top-bar .drawer ul li{
+    margin-right: 40px;
+    padding-bottom: 10px;
+   
+}
+.top-bar .drawer ul li a{
+    color: var(--title-color);
+    display: inline-block;
+}
+
+.top-bar .drawer ul li a.active{
+    color: var(--first-color);
+    
+}
+.top-bar .drawer ul li.b-bottom{
+    border-bottom: 1px solid var(--first-color);
+}
+.top-bar .menu-icon{
+    display: none;
+}
+.drawer .close-btn {
+    display: none;
+    
+}
+ /* ============ home section  ========================== */
+
+.home{
+   position: relative;
+   min-height: 100vh;
+   overflow: hidden;
+}
+.home .home-content{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-80%);
+}
+.home-content .sub-title h2{
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px var(--text-color);
+    color: transparent;
+    font-weight: 700;
+    
+}
+.home-content .title h1{
+    text-transform: uppercase;
+    color: var(--title-color);
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+.home-content .description p{
+    color: var(--text-color-light);
+    margin-bottom: 30px;
+}
+.btn{
+    box-shadow: none !important;
+}
+.button{
+    padding: 10px 30px 10px 25px;
+    color: white;
+    background-color: var(--first-color-dark);
+    display: block;
+}
+.button:hover{
+    color: white;
+    cursor: pointer;
+}
+.button i{
+    margin-left: 10px;
+    margin-top: 3px;
+    transition: all 0.3s ease;
+}
+.button:hover i{
+    transform: translateX(10px);
+    color: white;
+}
+
+.home-img img {
+    width: 40%;
+    display: block;
+    z-index: 5;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+ }
+.home-img .triangle{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   /* height: height is define from script.js ; */
+   clip-path: polygon(100% 0, 0 100%, 100% 100%);
+}
+.home-img .triangle1{
+    width: 17;
+    background-color: var(--first-color);
+    z-index:3;
+}
+.home-img .triangle2{
+    width: 32%;
+    background-color: var(--first-color-alt);
+    z-index: 2;
+}
+.home-img .triangle3{
+    width: 50%;
+    background-color: var(--first-color-dark);
+    z-index: 1;
+}
+
+/* ================ programme ==================== */
+
+.title-head{
+    text-align: center;
+}
+.title-head h4{
+    color: var(--first-color);
+    text-transform: capitalize;
+    font-family: 'Kaushan Script', cursive;
+}
+.program .title h1,
+.choose-us .title h1,
+.pricing .title h1,
+.bmi .title h1{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40;
+    text-transform: uppercase;
+    margin-top: 20px;
+    color: white;
+}
+.program .title h1 span,
+.choose-us .title h1 span,
+.pricing .title h1 span,
+.bmi .title h1 span {
+    -webkit-text-stroke: 1px var(--text-color);
+    color: transparent;
+    margin-right: 15px;
+}
+
+.program .card{
+    background-color: var(--title-color-black);
+    color: white;
+    min-height: 320px;
+    padding: 30px 20px;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+}
+.program .card .card-img,
+.price-item .head{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    position: relative;
+    background-color: var(--text-color);
+}
+.program .card .card-img img,
+.price-item .head img{
+    position: absolute;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.program .card .card-body{
+    position: relative;
+}
+.program .card .card-body p{
+    color: var(--text-color);
+}
+.program .card .card-body i{
+    position: absolute;
+    left: 80%;
+    color: var(--title-color-black);
+    transition: all 0.3s ease;
+}
+.program .card:hover,
+.price-item:hover{
+    background-color: var(--first-color);
+    color: black;
+}
+.program .card:hover .card-img,
+.price-item:hover .head{
+    background-color: var(--first-color-light);
+    
+}
+.program .card:hover p{
+    color: black;
+}
+.program .card:hover i{
+    left: 90%;
+    color: black;
+}
+
+/*  ===================== choose us =================== */
+.choose-us{
+    overflow: hidden;
+}
+.choose-img{
+    position: relative;
+    display: block;
+}
+
+.choose-img img{
+    max-width: 90%;
+    display: block;
+    position: relative;
+    z-index: 5;
+}
+.choose-img .triangle-choose{
+    position: absolute;
+    height: 800px;
+    left: 0;
+    bottom: 0;
+    clip-path: polygon(100% 100%, 0 100%, 0 0);
+}
+.choose-img .triangle1{
+    width: 33%;
+    background-color: var(--first-color);
+    z-index: 3;
+}
+.choose-img .triangle2{
+    width: 66%;
+    background-color: var(--first-color-alt);
+    z-index: 2;
+}
+.choose-img .triangle3{
+    width: 95%;
+    background-color: var(--first-color-dark);
+    z-index: 1;
+}
+.choose-us .title-head{
+    text-align: left;
+}
+.choose-us .title h1{
+    text-align: left;
+}
+.choose-us .why-choose{
+    color: var(--text-color);
+    margin: 25px 0;
+}
+.statistic h2{
+    font-family: 'Kaushan Script', cursive;
+    color: var(--first-color);
+}
+.statistic small{
+    color: var(--text-color);
+}
+
+/* ============== pricing ================== */
+.pricing{
+    padding: 0 50px;
+}
+.price-item{
+    background-color: var(--title-color-black);
+    padding: 30px 40px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.price-item .title h4{
+    color: var(--text-color);
+    margin-left: 10px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.price-item .amount h2{
+    color: white;
+    margin-left: 10px;
+    font-weight: 700;
+}
+.price-item ul li{
+    color: var(--text-color);
+    margin-left: 10px;
+    line-height: 35px;
+}
+.list-opacity{
+    opacity: 0.3;
+}
+.price-item ul li i{
+    color: var(--first-color);
+}
+.price-item .button{
+    background-color: var(--text-color-light);
+    margin-left: 10px;
+    margin-top: 20px;
+    color: black;
+    display: block;
+}
+
+.price-item:hover .title h4,
+.price-item:hover .amount h2,
+.price-item:hover ul li {
+    color: black;
+}
+.price-item:hover ul li i {
+    color: var(--text-color);
+}
+.price-item .button:hover i{
+    color: black;
+}
+.price-item.active{
+    background-color: var(--first-color);
+}
+.price-item.active .head{
+    background-color: var(--first-color-light);
+}
+.price-item.active .title h4,
+.price-item.active .amount h2,
+.price-item.active ul li{
+    color: black;
+}
+.price-item.active ul li i{
+    color: var(--text-color);
+}
+.price-item.active .button i{
+    color: black;
+}
+
+/*  =================== calculate bmi ================= */
+
+.bmi .title h1{
+    font-size: 30px;
+    text-align: left;
+}
+.bmi .title p{
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.bmi-form .form-control,
+.subscribe .form-control{
+    border: 2px solid var(--first-color);
+    background-color: transparent;
+    box-shadow: none !important;
+    color: var(--text-color);
+    outline: none;
+}
+.bmi-form input::-webkit-inner-spin-button,
+.bmi-form input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.bmi-form input[type=number]{
+    -moz-appearance: textfield;
+}
+.bmi-form .input-box,
+.subscribe input{
+    position: relative;
+    display: inline-block;
+    width: 40%;
+    margin-right: 20px;
+}
+.bmi-form label{
+    position: absolute;
+    color: white;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bmi-form .button{
+    width: calc(80% + 20px);
+    margin-top: 25px;
+    color: black;
+    font-weight: 600;
+}
+.bmi-form .button:hover i{
+    color: black;
+}
+.bmi-img img{
+    width: 50%;
+}
+.subscribe .message,
+.message
+{
+    color: white;
+    margin-top: 20px;
+}
+.subscribe .message.green,
+.message.green{
+    color: green;
+}
+.subscribe .message.red,
+.message.red{
+    color: red;
+}
+/*  ================ footer =========== */
+.subscribe img{
+    width: 5%;
+    position: relative;
+}
+.subscribe img::after{
+    position: absolute;
+    content: "\STRONG";
+    left: 100%;
+    top: 0;
+}
+.subscribe p{
+    color: var(--text-color);
+    margin-top: 10px;
+}
+.subscribe .button{
+    display: inline-block;
+    color: black;
+    font-weight: 600;
+}
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+.footer-content h5{
+    color: white;
+    margin-bottom: 12px;
+}
+.footer-content ul li{
+    color: var(--text-color);
+    line-height: 30px;
+}
+
+.scroll-top{
+    position: fixed;
+    right: -40px;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--first-color);
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    
+}
+.scroll-top:hover{
+    transform: translateY(-10px);
+}
+.show-scroll-top{
+    right: 30px;
+    bottom: 30px;
+}
