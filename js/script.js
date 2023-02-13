@@ -186,6 +186,7 @@ const sr = ScrollReveal({
     delay: 400,
     // reset: true // default : false
 })
+
 sr.reveal('.home-content')
 sr.reveal('.homeimg, .sr-footer' ,{origin:'bottom', delay: 700})
 sr.reveal('.brand-img, .card, .price-item' ,{interval: 100})
